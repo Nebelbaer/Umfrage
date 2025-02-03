@@ -1,1 +1,30 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Redirect</title>
+    <script>
+        window.onload = function () {
+            // Liste der Microsoft Forms Links
+            var links = [
+                "https://forms.office.com/example1",
+                "https://forms.office.com/example2",
+                "https://forms.office.com/example3"
+            ];
+            
+            // Zufälligen Link auswählen
+            var randomLink = links[Math.floor(Math.random() * links.length)];
 
+            // Weiterleitung durchführen
+            window.location.href = randomLink;
+        };
+    </script>
+</head>
+<body>
+    <p>Falls Sie nicht automatisch weitergeleitet wirst, <a id="manualLink" href="#">klicken Sie hier</a>.</p>
+    <script>
+        document.getElementById("manualLink").href = links[Math.floor(Math.random() * links.length)];
+    </script>
+</body>
+</html>
